@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:padding="5dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSala"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:theme="@style/Theme.MaterialComponents.DayNight"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Media -->
+            <ImageView
+                android:id="@+id/imagemSala"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:contentDescription="Exemplo de sala"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/sala_exemplo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Title, secondary and supporting text -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nomeSala"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Sala Galaxy"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/estadoSala"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:drawableRight="@drawable/ic_circle"
+                            android:drawableTint="@color/textbox_cinza"
+                            android:drawablePadding="10dp"
+                            android:text="Dísponivel"
+                            android:gravity="center"
+                            android:textColor="#292929"
+                            android:textSize="13dp" />
+
+                        <TextView
+                            android:id="@+id/aposLimpeza"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:drawableRight="@drawable/ic_circle"
+                            android:drawableTint="@color/textbox_cinza"
+                            android:drawablePadding="10dp"
+                            android:text="Dísponivel"
+                            android:gravity="center"
+                            android:textColor="#292929"
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lugaresSala"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="0dp"
+                    android:drawableLeft="@drawable/ic_account_min"
+                    android:drawablePadding="10dp"
+                    android:text="12 lugares"
+                    android:gravity="center"
+                    android:textColor="#292929"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/descricaoSala"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:drawableLeft="@drawable/ic_location_min"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/black"
+                    android:text="Segundo andar, a esquerda"
+                    android:textColor="#292929"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

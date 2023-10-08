@@ -1,0 +1,133 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    android:padding="5dp"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/titleList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingTop="5dp"
+        android:text="Hoje"
+        android:textAlignment="center"
+        android:textColor="@color/smooth_black"
+        android:textSize="25sp"
+        android:visibility="gone"
+        android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/zxing_transparent"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="15dp"
+        android:theme="@style/Theme.MaterialComponents.DayNight"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:id="@+id/cardColor"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="start|center"
+            android:padding="5dp"
+            android:background="@drawable/border_left_grey"
+            >
+            
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/userImg"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:clipToOutline="true"
+                    app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+            
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/titleReuniao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textStyle="bold"
+                            android:text="Reserva na Sala Mundo"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:paddingBottom="5dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/data"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="2 de Jáneiro"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_grey"
+                                android:textSize="10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="das"
+                                android:textColor="@color/text_grey"
+                                android:textSize="10dp" />
+
+                            <TextView
+                                android:id="@+id/horario"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="10:00 as 12:00"
+                                android:textColor="@color/text_grey"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+                    
+                </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_arrow_right"
+                android:backgroundTint="@color/text_grey" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

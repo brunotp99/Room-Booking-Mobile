@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity">
+
+    <!-- Top App Bar -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:titleTextColor="@color/white"
+            app:menu="@menu/main_menu" >
+
+            <TextView
+                android:id="@+id/goback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/arrow_goback_24"
+                android:clickable="true"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:drawablePadding="15dp"
+                />
+
+            <ImageView
+                android:id="@+id/header_img"
+                android:src="@drawable/logo_branco"
+                android:layout_width="150dip"
+                android:layout_height="30dip" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Design -->
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progessBarEditar"
+        android:visibility="visible"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+    <LinearLayout
+        android:id="@+id/paginaEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imagemSala"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sala_exemplo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:textColor="@color/smooth_black"
+                android:text="Reservou a"/>
+
+            <TextView
+                android:id="@+id/mudarSala"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:drawableRight="@drawable/ic_edit_simple"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center"
+                android:drawableTint="@color/textbox_cinza"
+                android:padding="5dp"
+                android:textColor="@color/smooth_black"
+                android:background="@drawable/border_radius"
+                android:backgroundTint="#EAEAEA"
+                android:elevation="5dp"
+                android:text="Sala Mundo"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dataReserva"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/smooth_black"
+            android:text="Detalhes da reserva:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/dataEdit"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="110dp"
+                android:layout_height="140dp"
+                android:background="@drawable/border_radius"
+                android:backgroundTint="#EAEAEA"
+                android:elevation="5dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/txtDia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="20"
+                    android:textColor="@color/smooth_black"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtMes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtDia"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="-14dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="Maio"
+                    android:textColor="@color/smooth_black"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_edit_simple"
+                    app:tint="#F3C5C5C5" />
+
+
+            </RelativeLayout >
+
+            <RelativeLayout
+                android:id="@+id/horasEdit"
+                android:layout_width="110dp"
+                android:layout_height="140dp"
+
+                android:background="@drawable/border_radius"
+                android:backgroundTint="#EAEAEA"
+                android:elevation="5dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/txtComeco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="09:00"
+                    android:textColor="@color/smooth_black"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtAte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtComeco"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="-18dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="as"
+                    android:textColor="@color/smooth_black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txtFim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtAte"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins"
+                    android:text="10:00"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/smooth_black"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_edit_simple"
+                    app:tint="#F3C5C5C5" />
+
+
+            </RelativeLayout >
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_margin="10dp"
+            android:layout_height="1dp"
+            android:background="@color/textbox_cinza" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/smooth_black"
+            android:text="Detalhes da sala:"/>
+
+        <TextView
+            android:id="@+id/lugares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:paddingLeft="20dp"
+            android:drawableLeft="@drawable/ic_account"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/poppins_light"
+            android:text="15 Lugares"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/outras"
+            app:layout_constraintTop_toBottomOf="@+id/outras" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:paddingLeft="20dp"
+            android:drawableLeft="@drawable/ic_location"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/poppins_light"
+            android:text="Segundo andar, a esquerda"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/outras"
+            app:layout_constraintTop_toBottomOf="@+id/outras" />
+
+    </LinearLayout>
+
+    <!-- Bottom Nav -->
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fabCradleMargin="10dp"
+        app:fabCradleVerticalOffset="5dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/bottom_navigation_menu" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_qrcode"
+        app:backgroundTint="@color/white"
+        android:elevation="6dp"
+        app:layout_anchor="@id/bottomAppBar" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

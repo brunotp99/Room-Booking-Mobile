@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".criarReserva">
+
+    <!-- Top App Bar -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:titleTextColor="@color/white"
+            app:menu="@menu/main_menu" >
+
+            <TextView
+                android:id="@+id/goback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/arrow_goback_24"
+                android:clickable="true"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:drawablePadding="15dp"
+                />
+
+            <ImageView
+                android:id="@+id/header_img"
+                android:src="@drawable/logo_branco"
+                android:layout_width="150dip"
+                android:layout_height="30dip" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Design da Home -->
+
+    <LinearLayout
+        android:id="@+id/paginaCriarReservas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/txtReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_gravity="center"
+            android:textColor="@color/smooth_black"
+            android:padding="10dp"
+            android:text="Reserva para 2022-05-14" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <nl.joery.timerangepicker.TimeRangePicker
+                android:id="@+id/picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:trp_thumbIconEnd="@drawable/fim"
+                app:trp_thumbIconStart="@drawable/comeco"
+                app:trp_stepTimeMinutes="5"
+                app:trp_maxDuration="9:00"
+                app:trp_minDurationMinutes="30" />
+
+            <LinearLayout
+                android:id="@+id/time_layout"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <LinearLayout
+                    android:id="@+id/bedtime_layout"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="Começa"
+                        android:src="@drawable/comeco"
+                        app:tint="#000" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Começa"
+                            android:textAlignment="center"
+                            android:textColor="?android:textColorPrimary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="?android:textColorPrimary"
+                            android:textSize="20sp"
+                            tools:text="8:30" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wake_layout"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="Termina"
+                        app:tint="#000"
+                        android:src="@drawable/fim" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Termina"
+                            android:textAlignment="center"
+                            android:textColor="?android:textColorPrimary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="?android:textColorPrimary"
+                            android:textSize="20sp"
+                            tools:text="8:30" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/duration_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="32sp"
+                    tools:text="08" />
+
+                <TextView
+                    android:id="@+id/duration_hour_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textStyle="bold"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/duration_minute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="32sp"
+                    tools:text="22" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:text="Sleep for 1:15" />
+
+        <Button
+            android:id="@+id/criarReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/modern_button"
+            app:backgroundTint="@color/smooth_black"
+            android:text="Criar Reserva" />
+
+    </LinearLayout>
+
+    <!-- Bottom Nav -->
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fabCradleMargin="10dp"
+        app:fabCradleVerticalOffset="5dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/bottom_navigation_menu" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_qrcode"
+        app:backgroundTint="@color/white"
+        android:elevation="6dp"
+        app:layout_anchor="@id/bottomAppBar" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

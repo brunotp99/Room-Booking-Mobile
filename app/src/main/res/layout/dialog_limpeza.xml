@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:minWidth="300dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@drawable/border_radius">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/pencil"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gerir Pedido"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="24sp"
+        android:textColor="@color/smooth_black"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/descricaoPedido"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#686868"
+        android:fontFamily="@font/poppins"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:textSize="12dp"
+        android:text="Por favor, proceder a limpeza com urgencia!" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/smooth_black"
+        android:fontFamily="@font/poppins"
+        android:textAlignment="center"
+        android:text="Selecione uma opção" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/dialogLimpa"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:background="@drawable/modern_button"
+            android:fontFamily="@font/poppins"
+            android:text="Limpa"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:layout_margin="10dp"
+            app:backgroundTint="@color/danger_bg" />
+
+        <Button
+            android:id="@+id/dialogLimpaDesinfectada"
+            android:layout_alignParentRight="true"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins"
+            android:layout_gravity="center"
+            android:background="@drawable/modern_button"
+            app:backgroundTint="@color/danger_bg"
+            android:layout_margin="10dp"
+            android:text="Limpa e Desinfetada" />
+
+        <Button
+            android:id="@+id/dialogTerminar"
+            android:layout_alignParentRight="true"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins"
+            android:layout_gravity="center"
+            android:background="@drawable/modern_button"
+            app:backgroundTint="@color/smooth_black"
+            android:layout_margin="10dp"
+            android:text="Voltar" />
+
+    </LinearLayout>
+
+</LinearLayout>

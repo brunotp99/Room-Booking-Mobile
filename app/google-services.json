@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "708257010333",
+    "project_id": "appsoftinsa",
+    "storage_bucket": "appsoftinsa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708257010333:android:98d12480a55460b9f47a74",
+        "android_client_info": {
+          "package_name": "com.example.appmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708257010333-vadejn61nmvg1ikdrcc9gikvh4c9cp24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzfvTUHscXS1XUnmCGQ_w7L9xkf4BNT6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708257010333-vadejn61nmvg1ikdrcc9gikvh4c9cp24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

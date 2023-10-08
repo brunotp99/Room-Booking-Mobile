@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:minWidth="300dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@drawable/border_radius">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/pencil"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alterar Nome"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="24sp"
+        android:textColor="@color/smooth_black"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:inputType="text"
+        android:fontFamily="@font/poppins"
+        android:textSize="14dp"
+        android:text="Insira o seu nome..."
+        android:background="@drawable/custom_input"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/dialogAceitar"
+            android:layout_centerHorizontal="true"
+            app:icon="@drawable/ic_baseline_check_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/modern_button"
+            app:backgroundTint="@color/azul_800"
+            android:text="Guardar" />
+
+    </RelativeLayout>
+
+</LinearLayout>

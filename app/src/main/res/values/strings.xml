@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Softinsa Reservas</string>
+    <string-array name="locais">
+        <item>Viseu</item>
+        <item>Porto</item>
+        <item>Lisboa</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_calendar">calendar</string>
+    <string name="notification_channel_group_general">General</string>
+
+    <string name="sucesso_add_reserva">Sucesso, a sua reserva foi adicionada!</string>
+    <string name="erro_add_reserva">Desculpe, não foi póssivel adicionar a reserva!</string>
+    <string name="sucesso_remove_reserva">Sucesso, a sua reserva foi removida!</string>
+    <string name="erro_remove_reserva">Desculpe, não foi póssivel remover a reserva!</string>
+    <string name="erro_geral">Desculpe, não foi póssivel efectuar o seu pedido!</string>
+    <string name="sucesso_apagar_reserva">Sucesso, a sua reserva foi concluida!</string>
+    <string name="erro_apagar_reserva">Desculpe, não foi póssivel concluir a reserva!</string>
+    <string name="sucesso_extender_reserva">Sucesso, a sua reserva foi extendida!</string>
+    <string name="erro_extender_reserva">Desculpe, não foi póssivel extender a reserva!</string>
+    <string name="sobreposicao_reservas">Já existe uma reunião agendada após a sua!</string>
+    <string name="edit_reserva_erro">Desculpe, não foi póssivel guardar as alterações!</string>
+    <string name="edit_sucesso">Sucesso, a sua reserva foi alterada!</string>
+    <string name="erro_data_indisponivel">Porfavor, selecione uma data válida!</string>
+    <string name="erro_fins_de_semana">Não pode reservar aos fins de semana.</string>
+    <string name="erro_mostrar_calendario">Não foi póssivel abrir o calendario</string>
+    <string name="erro_intervalo_indisponivel">Porfavor, escolha um intervalo disponível!</string>
+    <string name="notificacoes_ativas">Recebera novamente as notificações!</string>
+    <string name="notificacoes_desativadas">Não recebera novas notificações!</string>
+    <string name="edit_utilizador_sucesso">O seu nome de utilizador foi atualizado!</string>
+    <string name="erro_campo_vazio">Desculpe, não pode deixar esse campo vázio!</string>
+    <string name="edit_cargo_sucesso">O seu cargo foi atualizado!</string>
+    <string name="edit_password_sucesso">Sucesso, a sua palavra-passe foi alterada!</string>
+    <string name="edit_password_erro">Desculpe, não foi póssivel atualizar a sua palavra-passe!</string>
+    <string name="edit_cargo_erro">Desculpe, não foi póssivel atualizar o seu cargo!</string>
+    <string name="edit_utilizador_erro">Desculpe, não foi póssivel atualizar o seu nome!</string>
+    <string name="erro_password_correspondencia">Atenção, as palavra-passe não correspondem!</string>
+    <string name="erro_password_curta">Atenção, a palavra-passe tem que ter mais de 6 caracteres!</string>
+    <string name="erro_palassword_invalida">Atenção, a palavra-passe antiga é invalida!</string>
+    <string name="edit_imagem_sucesso">Sucesso, a sua imagem foi alterada!</string>
+    <string name="edit_imagem_erro">Desculpe, não foi póssivel alterar a imagem!</string>
+    <string name="erro_qrcode_sala">Desculpe, a sala selecionada já não se encontra disponível para reservas.</string>
+    <string name="erro_qrcode_formato">Desculpe, o QRCODE lido não respeita o formato predefinido. Gere outro atraves do tablet.</string>
+    <string name="erro_qrcode_vazio">Desculpe, o QRCODE lido é invalido! Gere outro atraves do tablet.</string>
+    <string name="erro_qrcode_permissoes">Atenção, precisa de aceitar as permissões para poder fazer scan do QRCODE!</string>
+    <string name="sucesso_notificacao_remover">A notificação foi removida!</string>
+    <string name="sucesso_pedido_terminado">Sucesso, o pedido foi terminado!</string>
+    <string name="erro_pedido_terminado">Desculpe, não foi póssivel terminar o pedido!</string>
+    <string name="erro_login_internet">Porfavor, verificar a sua conexão com a internet.</string>
+    <string name="erro_estabelecimento_vazio">Selecione um estabelecimento!</string>
+    <string name="erro_login_invalido">Os dados inseridos são invalidos!</string>
+    <string name="erro_mostrar_salas">Desculpe, não foi póssivel mostrar as salas!</string>
+    <string name="erro_selecionar_hora">Porfavor, selecione uma hora de inicio!</string>
+    <string name="sucesso_recuperar_password">Sucesso, recebera uma palavra-passe temporaria no email fornecido!</string>
+    <string name="erro_suporte_sdk">Desculpe, o seu dispositivo não suporta esta funcionalidade! Por favor, proceda a sua atualização.</string>
+</resources>

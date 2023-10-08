@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.appmobile.SwipeRevealLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:minHeight="90dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:dragFromEdge="right">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|end"
+                android:layout_gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/info_button"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/editar_reserva" />
+
+                <ImageView
+                    android:id="@+id/edit_button"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/apagar_reserva" />
+    <!--
+                <ImageButton
+                    android:id="@+id/info_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/trash_black"
+                    android:text="Info"/>
+
+                <ImageButton
+                    android:id="@+id/edit_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/editing"
+                    android:text="Edit"/> -->
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="5dp"
+            android:visibility="visible">
+
+            <FrameLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/azul_800"
+                        android:text="Reserva na Sala Mundo"/>
+
+                    <TextView
+                        android:id="@+id/horario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:drawableLeft="@drawable/time_size"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="@color/black"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="10:00 - 12:00"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/emcurso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="Agendada"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:drawableLeftCompat="@drawable/ic_circle"
+                        app:drawableTint="@color/textbox_cinza" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rotation="180"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_arrow_right"
+                    android:backgroundTint="@color/text_grey"
+                    android:layout_gravity="center|end"
+                    />
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+</com.example.appmobile.SwipeRevealLayout>
