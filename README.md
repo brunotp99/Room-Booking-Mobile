@@ -7,5 +7,5 @@ This is a repository for Mobile Room Booking App: Kotlin, JitPack | Softinsa
 ### Cloning the repository
 
 ```shell
-git clone https://github.com/brunotp99/Room-Booking-Mobile.git
+git clone https://github.com/brunotp99/Room-Booking-Tablet.git
 ```
